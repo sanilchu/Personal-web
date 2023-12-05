@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Website </title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/3e3eba358b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+
+        <nav>
+            <img src="log.webp" class="logo">
+        <ul>
+            <li> <a href="#header">Home</a></li>
+            <li> <a href="#about">About</a></li>
+            <li> <a href="#">Services</a></li>
+            <li> <a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+<div class="header-text">
+    <p>Personal Website</p>
+    <h1>Hi, I'm <span>Sanil Chulyadyo</span><br> From Bhaktapur,Nepal</h1>
+</div>
+</div>  
+
+
+<!------------------aboout-->
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-column1">
+                <img src="abt.jpeg"> 
+                </div>
+
+                <div class="column2">
+                    <h1  class="sub-title">About me</h1>
+                    <p>My name is Sanil Chulyadyo.I live in Bhaktapur,Nepal. 
+                        I am currently studying BBIS(Bachelors in Business Information System) at Kathmandu university.
+                    I am 20 years old. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('Educations')">Educations</p>
+                    </div>
+            <div class="tab-content active-tab" id="Skills">
+                <ul>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>CSS</span><br>Desgning with CSS</li>
+                    <li><span>Python</span><br>Desgning backhend with Python</li>
+
+                </ul>
+            </div>
+            <div class="tab-content" id="Educations">
+                <ul>
+                    <li><span>Current</span><br>Kathmandu University(BBIS)/3rd year</li>
+                    <li><span>2020</span><br>Kathmandu World School- Plus 2</li>
+                    <li><span>2018</span><br>Genuine Secondary School- SEE</li>
+                    <li><span>2016</span><br>Genuine Secondary School- DLE</li>
+
+                </ul>
+            </div>
+                </div>
+               
+        </div>
+    </div>
+</div>
+
+    </div>
+    <!--------------contact------------>
+ <div id="contact">
+     <div class="container">
+         <div class="row">
+             <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <p><i class="fa-solid fa-paper-plane"></i>chulyadyosanil@gmail.com</p>
+                 <p><i class="fa-solid fa-phone"></i>9841249147</p>
+                 <div class="social-icons">
+                     <a href="https://www.facebook.com/sanil.chulyadyo"><i class="fa-brands fa-facebook"></i></a>
+                     <a href="https://www.instagram.com/_sanil_c/"><i class="fa-brands fa-instagram"></i></a>
+                     <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    
+                 </div>  
+                 <a href="" class="btn">Download CV</a>
+ 
+                
+             </div>
+             <div class="contact-right">
+                 <form>
+             <input type="text" name="Name" placeholder="Your name" required>
+             <input type="email" name="email" placeholder="Your email" required>
+             <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+                 </form>
+             </div>
+         </div>
+         </div>
+         </div>
+          
+            
+
+
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-content");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    </body>
+    </html>
